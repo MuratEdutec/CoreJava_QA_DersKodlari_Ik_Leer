@@ -1,4 +1,4 @@
-package stringBuilders_AccessModifier;
+package ders29_stringBuilders_AccessModifier;
 
 public class C02_StringBuilder {
     public static void main(String[] args) {

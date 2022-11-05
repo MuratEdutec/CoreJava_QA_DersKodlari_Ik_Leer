@@ -1,6 +1,4 @@
-package stringBuilders_AccessModifier;
-
-import java.sql.SQLOutput;
+package ders29_stringBuilders_AccessModifier;
 
 public class C03_StringBuilder {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package stringBuilders_AccessModifier;
+package ders29_stringBuilders_AccessModifier;
 
 import java.util.ArrayList;
 import java.util.List;
