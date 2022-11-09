@@ -6,6 +6,9 @@ public class BToyota extends Araba{
     }
     BToyota (int pt){
         System.out.println("Parametreli Toyota constructor");
-
+    }
+    BToyota(String pt2){
+        super("Mehmet");
+        System.out.println("String paremetreli toyota constructor");
     }
 }
