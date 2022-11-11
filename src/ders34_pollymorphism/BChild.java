@@ -30,6 +30,17 @@ public class BChild extends AParent{
 
         /*
         Overriding method @Override notasyonu ile isaretlenebilir
+        @Override kullanilmayan overriding isleminde,
+        parent class'daki overridden method silinirse
+        hicbir sorun omaz.
+
+
+        @Override kullanilan overriding isleminde,
+        parent class'daki overridden method silinirse veya
+        signature'i degistirilirse
+        Java CTE verir, boylece overridden method'un silinmesi engellenir
+
+
          */
 
     //
