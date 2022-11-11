@@ -34,7 +34,7 @@ public class Corolla extends BToyota{
         BToyota corolla2=new Corolla();
         /*
         Obje olusturulurken
-        data turu ve constructor darkli ise
+        data turu ve constructor farkli ise
         VARIABLE'in degerini bulmak icin
         Data turu olan class'a gidilir
         varsa kullanilir, yoksa o class'in parent'larina bakilir

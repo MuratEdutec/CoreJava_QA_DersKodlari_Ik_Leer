@@ -20,7 +20,7 @@ public class FAvciKuslar extends EKuslar{
     public static void main(String[] args) {
         FAvciKuslar avci1 = new FAvciKuslar();
     /*
-     Bir obhe olusturulurken
+     Bir obje olusturulurken
      constructor ve data turu ayni ise
      Hangi METHOD'un gecerli oldugunun bulmak icin
      o class'a gider varsa kullaniriz
@@ -57,7 +57,7 @@ public class FAvciKuslar extends EKuslar{
         System.out.println("---------- Avci Kuslar ---");
         avci2.beslenme();// Avci kuslar
         avci2.gaga();// Avci kuslar
-        //avci2.pence();// Avci kuslar
+        //avci2.pence();// CTE
         avci2.hareket();// Avci kuslar
         avci2.cogalma();// Kuslar
         avci2.kanat();// Kuslar
@@ -65,11 +65,50 @@ public class FAvciKuslar extends EKuslar{
         avci2.solunum();// Kuslar
 
 
+        DHayvanlar avci3=new FAvciKuslar();
+        // data hayvanlar constructor avcikuslar
+        System.out.println("---------- Hayvanlar ---");
+        avci3.beslenme();// Avci kuslar
+        //avci3.gaga();// CTE
+        //avci.pence();// CTE
+        avci3.hareket();// Avci kuslar
+        avci3.cogalma();// Kuslar
+        //avci3.kanat();// CTE
+        avci3.omur();// Hayvanlar
+        avci3.solunum();// Kuslar
 
 
 
+        EKuslar kus1= new EKuslar();
+        // data turu ayni constructor ayni -- buldugunu hemen kullan
+        kus1.cogalma();// Kuslar
+        kus1.gaga();// Kuslar
+        kus1.kanat();// Kuslar
+        kus1.hareket();// Hayvanlar
+        kus1.solunum();// Kuslar
+        kus1.beslenme();// Hayvanlar
+        kus1.omur();// Hayvanlar
+
+        /*
+        Method'larla belirlenen ozellikler
+        en guncel bilgiyi bulurken
+        variable iel belirlenen ozellikler
+        ilk buldugu degeri kullanir
+
+        bunun icin method'lara dinamik ozellik
+        variable'a static ozellik denir
+         */
 
 
+       DHayvanlar kus2= new EKuslar();
+        // data turu ayni constructor ayni -- buldugunu hemen kullan
+        kus2.cogalma();// Kuslar
+        //kus2.gaga();// CTE
+        //kus2.kanat();// CTE
+        kus2.hareket();// Hayvanlar
+        kus2.solunum();// Kuslar
+        kus2.beslenme();// Hayvanlar
+        kus2.omur();// Hayvanlar
 
 
 
