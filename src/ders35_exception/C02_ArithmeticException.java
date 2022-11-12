@@ -11,6 +11,7 @@ public class C02_ArithmeticException {
         int sayi2=0;
         try {
             System.out.println(sayi1/sayi2);
+            System.out.println("bakalim bu satir calisacak mi?");
         } catch (ArithmeticException e) {
             // catch (Exception)
             System.out.println("Sayi sifira bolunemen");
