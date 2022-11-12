@@ -15,8 +15,28 @@ public class C03_ArrayIndexOutOfBoundException {
         System.out.println("Lutfen bir index giriniz ");
 
         int index=scan.nextInt();
-        System.out.println(arr[index]);
 
+
+        try {
+
+
+            System.out.println(arr[index]);
+
+
+        } catch (ArrayIndexOutOfBoundsException  hata) {
+            System.out.println(hata.getMessage()); //Index 12 out of bounds for length 12
+
+            hata.printStackTrace();
+         //  Index 13 out of bounds for length 12
+         //   java.lang.ArrayIndexOutOfBoundsException: Index 13 out of bounds for length 12
+         //   at ders35_exception.C03_ArrayIndexOutOfBoundException.main(C03_ArrayIndexOutOfBoundException.java:23)
+
+         // catch blogundaki hicbir kod olmasa da kodlarimiz normal calismaya   BURASI EKSIKKKKKKK------------
+            //
+            // /
+
+
+        }
 
 
     }
