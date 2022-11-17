@@ -3,7 +3,7 @@ package ders27_immutableClasses_DateTime;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class C07_PeriodOf {
+public class C07_DogumTarihi {
     public static void main(String[] args) {
 
 
