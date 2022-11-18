@@ -1,4 +1,4 @@
 package ders39_AbstractClass;
 
-public class BHonda {
+public class BHonda extends Araba{
 }

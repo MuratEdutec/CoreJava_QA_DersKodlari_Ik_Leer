@@ -1,4 +1,4 @@
 package ders39_AbstractClass;
 
-public class BToyota {
+public class BToyota extends Araba{
 }
