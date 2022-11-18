@@ -34,30 +34,36 @@ public class CHondaCivic extends BHonda {
 
     }
 
-    public static void main(String[] args) {
-        CHondaCivic civic1= new CHondaCivic();
-
-        civic1.abs();
-        civic1.klima();
-        civic1.marka();
-        civic1.ozelTeknoloji();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public void abs() {
+        System.out.println("Honda Civic arabalar standard abs kullanir");
     }
 
+    @Override
+    public void klima() {
+        System.out.println("Honda Civic arabalar standard klima kullanir");
+    }
 
+    public static void main(String[] args) {
+
+        /*
+        Abstract parent class'lardaki abstract method'lar
+        concrete child class'lar tarafindan mecburen override edilir
+
+        Ancak abstract parentlar'daki concrete method'lari
+        override etmek mecburi degildir.
+        Eger child class'a uyarlamaj isterseniz override edebilirsiniz
+        veya override etmeyip parent class'daki haliyle kullanabilirsiniz
+         */
+
+
+        CHondaCivic civic1= new CHondaCivic();
+
+        civic1.abs(); //Civic
+        civic1.klima();//Civic
+        civic1.marka();//Honda
+        civic1.ozelTeknoloji();//Honda
+
+    }
 
 }
