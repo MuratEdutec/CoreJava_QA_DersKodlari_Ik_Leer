@@ -1,6 +1,8 @@
 package ders40_Interfaces;
 
 public interface I02_ConcreteChildClassOFInterface extends I01_Interface{
+
+
     public static void main(String[] args) {
 
 
@@ -16,5 +18,26 @@ public interface I02_ConcreteChildClassOFInterface extends I01_Interface{
 
         System.out.println(Math.PI);
 
+
+
+
+
 }
+
+
+    @Override
+    default void method1() {
+
+    }
+
+    @Override
+    default int method2() {
+        return 0;
+    }
+
+    @Override
+    default String method3() {
+        return null;
+    }
+
 }
