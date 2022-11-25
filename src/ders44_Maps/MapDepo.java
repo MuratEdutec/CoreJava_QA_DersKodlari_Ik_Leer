@@ -1,8 +1,6 @@
 package ders44_Maps;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapDepo {
 
@@ -92,5 +90,46 @@ public class MapDepo {
                 System.out.println(valueArr[0] + " " + valueArr[1] + " " + valueArr[2]);
             }
         }
+    }
+
+    public static List<String> numaraDegerineGoreListe(Map<Integer, String> ogrenciMap, int basNo, int bitNo) {
+
+        // hem Key, hem de value lazim oldugundan keySet'i olusturduk
+        // sonra o key uzerinden value map'ten aldik
+
+        Set<Integer> ogrenciKeySeti= ogrenciMap.keySet();
+        Collection<String> ogrenciValueCollection= ogrenciMap.values();
+
+        // dondurecegimiz listeyi olusturalim
+
+        List<String> isimListesi= new ArrayList<>();
+
+        //Key degerlerini tek tek elden gecirip istenen aralikta olanlari bulalim
+
+        String value;
+        String [] valueArr;
+        String istenenIsim;
+
+        for (Integer eachKey:ogrenciKeySeti
+             ) {
+            if(basNo<= eachKey && eachKey<=bitNo){
+                //buraya verilen sinir degerlerine uyan
+                // eachKey'ler gelecek
+
+                //sinira uygun key'in value'sunu alalim
+
+                value= ogrenciMap.get(eachKey);
+                //value'yu parcalara ayiralim
+                valueArr=value.split("-");
+                //value array'inden gerekli bilgileri alalim
+                istenenIsim=valueArr[0]+" "+ valueArr[1]+" "+valueArr[4];
+
+                // istenen ismi olusturduk bunu listeye ekleyelim
+
+                isimListesi.add(istenenIsim);
+            }
+        }
+        return isimListesi;
+
     }
 }
