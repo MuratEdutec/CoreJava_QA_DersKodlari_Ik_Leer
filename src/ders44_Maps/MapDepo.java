@@ -132,4 +132,21 @@ public class MapDepo {
         return isimListesi;
 
     }
+
+    public static void numaraIsimSoyisimYazdir(Map<Integer, String> ogrenciMap) {
+
+        Set<Integer> keySeti= ogrenciMap.keySet();
+    String value;
+    String[] valueArr;
+        for (Integer eachKey: keySeti
+             ) {
+            value= ogrenciMap.get(eachKey);
+            valueArr=value.split("-");//[Ayse, Can, 10, H, MF] bunu bize getirecek
+
+            System.out.println(eachKey+ " "+valueArr[0]+ " "+valueArr[1]);
+
+
+        }
+
+    }
 }
