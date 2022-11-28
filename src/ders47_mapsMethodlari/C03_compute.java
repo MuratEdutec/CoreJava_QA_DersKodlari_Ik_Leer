@@ -3,7 +3,7 @@ package ders47_mapsMethodlari;
 import java.util.HashMap;
 import java.util.Map;
 
-public class C03_MapsMethodlari {
+public class C03_compute {
 
     public static void main(String[] args) {
 
@@ -25,6 +25,22 @@ public class C03_MapsMethodlari {
 
         mp1.computeIfPresent("B", (k,v) -> 2*v);
         System.out.println(mp1);
+
+
+        // "A" key olarak varsa degerini 5 aZalt
+
+        mp1.compute("A", (k,v) -> v-5);
+        System.out.println(mp1);
+
+        // E yoksa degeri 8 olarak ekleyeli
+
+        //mp1.computeIfAbsent("E",v-> v+);
+        System.out.println(mp1);
+
+        // E nin degerini 4
+        mp1.computeIfAbsent("E",v->8);
+
+        mp1.computeIfAbsent("R",v->3);
 
 
         // Map' D yoksa Valuesi olarak 11 olacak sekilde ekleyelim
