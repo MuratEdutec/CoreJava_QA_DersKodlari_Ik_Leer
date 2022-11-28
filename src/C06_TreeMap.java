@@ -13,10 +13,12 @@ public class C06_TreeMap {
         mp1.put("F",8);
         System.out.println(mp1);
 
-        System.out.println("---------Higher Key---------");
+        System.out.println("---------Higher Lower Key---------");
         System.out.println(mp1.higherKey("D")); //F
         System.out.println(mp1.higherKey("H")); //T
         System.out.println(mp1.higherKey("U")); //null
+        System.out.println(mp1.lowerKey("F")); //C
+        System.out.println(mp1.lowerEntry("G")); //F=8
 
 
         System.out.println("---------Floor Entry---------");
@@ -38,10 +40,38 @@ public class C06_TreeMap {
         System.out.println(mp1.tailMap("F", false));//{H=3, T=3}
 
         System.out.println("---------Ceiling  Key---------");
-
         System.out.println(mp1.ceilingKey("F"));// F girilen deger esit veya buyuk olan
         System.out.println(mp1.ceilingKey("B")); //
         System.out.println(mp1.ceilingEntry("H")); // H=3
+
+
+        System.out.println("---------Descending Map---------");
+        System.out.println(mp1.descendingMap());//{T=3, H=3, F=8, C=7, A=5}
+        System.out.println(mp1.descendingKeySet());//[T, H, F, C, A]
+        System.out.println(mp1.descendingMap().values());//[3, 3, 8, 7, 5]
+
+        System.out.println("---------First Key---------");
+        System.out.println(mp1.firstKey()); //A
+        System.out.println(mp1.firstEntry());// A=5
+
+
+        System.out.println("---------Last Key---------");
+        System.out.println(mp1.lastKey()); //T
+        System.out.println(mp1.lastEntry());// T=3
+
+        System.out.println("---------Pol lAst first---------");
+        System.out.println(mp1.pollFirstEntry());//A=5
+        System.out.println(mp1);//{C=7, F=8, H=3, T=3}
+        System.out.println(mp1.pollLastEntry());//T=3
+        System.out.println(mp1);//{C=7, F=8, H=3}
+
+        System.out.println("---------subMap---------");
+
+        System.out.println(mp1.subMap("B", "G"));//{C=7, F=8}
+        System.out.println(mp1.subMap("C", "H")); //{C=7, F=8}  baslangic inclusive, bitis exclusive
+
+
+        System.out.println(mp1.subMap("C", false, "H", true));// {F=8, H=3}
 
 
     }
